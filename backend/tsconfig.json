@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
