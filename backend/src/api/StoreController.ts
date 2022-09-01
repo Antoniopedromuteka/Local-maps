@@ -14,3 +14,14 @@ export async function save(req:Request, res:Response){
 
     return res.status(200).json(savedStore);
 }
+
+export async function getAll(req: Request, res:Response){
+
+    const storeRepository = getRepository(Store);
+
+    const allStores = await storeRepository.find();
+
+
+    return res.status(200).json(allStores);
+
+}
