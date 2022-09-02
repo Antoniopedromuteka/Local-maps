@@ -5,6 +5,8 @@ import {createConnection} from "typeorm"
 
 import cors from "cors";
 
+import * as StoreController from "./src/api/StoreController"
+
 
 const PORT = 3000;
 
@@ -18,6 +20,9 @@ async function startup() {
     app.use(express.json());
 
     app.use(cors())
+
+    app.post("/store", StoreController.save);
+    app.get("/store", StoreController.getAll);
 
 
     app.listen(PORT, ()=>{
